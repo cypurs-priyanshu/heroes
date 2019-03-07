@@ -1,0 +1,9 @@
+<div >
+  <div>
+    <input type="button" (click)="refresh()" value="Refresh List"/>
+  </div>
+  <div class="box" *ngFor="let hero of heroDetail">
+    <div>Name: {{hero}}</div>
+    <div>Detail : This is hero detail</div>
+  </div>
+</div>
