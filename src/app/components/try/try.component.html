@@ -1,3 +1,15 @@
-<p>
-  try works!
-</p>
+<div class="form">
+  <h5>How many boxes you want?
+
+  </h5>
+
+  <label>Number of options
+    <input type="text" name="option" [(ngModel)]="option1"  >
+  </label>
+  <input type="button" value="click for boxes" name="box" (click)="box()" > 
+
+  <div *ngIf="isVisible">
+    <div *ngFor="let data of validValues;let a = index">Item - {{a+1}} <input type="text"  [value]="validValues[a]"  /> </div>
+    <input type="button" name="submit" value="save" (click)="createAnswer()" />
+  </div>
+</div>

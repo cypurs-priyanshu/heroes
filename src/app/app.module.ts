@@ -9,7 +9,10 @@ import { PeopleListComponent } from './components/simple-form/components/people-
 import { HeroComponent } from './components/component/hero/hero.component';
 import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
 import { UtilServicesService } from '../services/util-services.service';
-import { TryComponent } from './components/try/try.component';
+import { IdeaserviceService } from "../services/ideaservice.service";
+ 
+import { trycomponent } from './components/try/try.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,8 @@ import { TryComponent } from './components/try/try.component';
     PeopleListComponent,
     HeroComponent,
     HeroDetailComponent,
-    TryComponent
+    trycomponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,
