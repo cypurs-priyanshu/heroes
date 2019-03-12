@@ -10,8 +10,8 @@ import { DebugRenderer2 } from '@angular/core/src/view/services';
 })
 export class trycomponent implements OnInit {
   value1 = '';
-  public option1 = '4';
-  isVisible:Boolean =  false;
+  public option1 = '2';
+  isVisible: Boolean = false;
   validValues = [];
   passtitle(value: string) {
     debugger;
@@ -27,11 +27,12 @@ export class trycomponent implements OnInit {
     console.log("temp value", temp);
 
     if (!isNaN(temp)) {
-      if (temp <= 5) {
+      if (temp <= 5 && temp > 0) {
         console.log(this.option1);
-        this.isVisible =true
+        this.isVisible = true
+        this.validValues = null;
         this.validValues = new Array(temp);
-        for(var c =0;c <temp; c++){
+        for (var c = 0; c < temp; c++) {
           this.validValues[c] = "";
         }
         console.log(this.validValues);
@@ -47,9 +48,14 @@ export class trycomponent implements OnInit {
       this.isVisible = false;
     }
   }
-  createAnswer()
-  {
+  createAnswer() {
     console.log(this.validValues);
 
+  }
+
+  setValue(event, index) {
+    console.log(event.target.value, index);
+    this.validValues[index] = event.target.value;
+    console.log(this.validValues);
   }
 }

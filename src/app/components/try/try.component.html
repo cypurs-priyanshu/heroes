@@ -1,20 +1,23 @@
-<body>
-  <div class="container">
-<div class="col-sm-6 form">
-  <h5>We are connecting a poll feedback form to improve our city . so please participate in it 
-    and gives us some review about your city. what you want? where ? why etc.
+<div class="form">
+  <div class="col-sm-6">
+  <h5>How many boxes you want?
 
-  </h5><br><br>
+  </h5>
 
   <label>Number of options
-      <br><br><input type="text" name="option" [(ngModel)]="option1"  class="input_box" >
+    <input type="text" name="option" [(ngModel)]="option1"  >
   </label>
-  <br> <br><input type="button" value="click for boxes" name="box" (click)="box()"  class="btn btn-info" ><br> 
+  <input type="button" value="click for boxes" class="btn btn-info" name="box" (click)="box()" > 
 
-  <div *ngIf="isVisible"><br><br>
-    <div *ngFor="let data of validValues;let a = index">feedback - {{a+1}} <input type="text" class="input_box" [value]="validValues[a]"  /> </div>
-   <br> <input type="button" name="save" value="save" (click)="createAnswer()"  class="btn btn-info"/>  </div>
+  <div *ngIf="isVisible">
+    <div *ngFor="let data of validValues;let a = index" >Item - {{a+1}} 
+      <input type="text"  (change)="setValue($event,a)"  [value]="validValues[a]" /> 
+      <!-- <input type="text"  [(ngModel)]="validValues[a]" /> -->
+    </div>
+    
+  </div>
+  <div *ngIf="isVisible">
+    <input type="button" name="submit"  class="btn btn-info" value="save" (click)="createAnswer()"  />
+  </div>
 </div>
 </div>
-  
-</body>
