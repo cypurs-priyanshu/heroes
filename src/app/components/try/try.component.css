@@ -1,0 +1,36 @@
+body
+{
+    
+    
+    width:50%;
+    /* height:500px; */
+}
+h5
+{
+
+    font-weight: normal;
+}
+ .form
+ { 
+      background-color: bisque;
+     margin-top: 10%;
+      margin-left: 40%;
+width: 100%;
+height:550px;
+padding-top: 50px;
+ 
+
+ }
+ .input_box
+ {
+    background-color: rgb(178, 215, 230);
+ }
+ @media  only screen and (min-width: 300px)
+ {
+ .form
+    {
+         
+     width: 100%;
+     height:auto;
+ }
+}
